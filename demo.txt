@@ -1,0 +1,8 @@
+usersdate = input('please provide your appointment date(d/m/y)')
+conusersdate = datetime.datetime.strptime(usersdate, '%m/%d/%Y').date()
+currentdate = datetime.date.today()
+total_numbers_of_days = conusersdate - currentdate
+num_of_weeks = total_numbers_of_days.days // 7
+num_of_days = total_numbers_of_days.days % 7
+print(f'Dear user you have {num_of_weeks} weeks and {num_of_days} days until your appointment')
+End of program
